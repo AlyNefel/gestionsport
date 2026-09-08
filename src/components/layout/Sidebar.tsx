@@ -36,14 +36,14 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="flex h-full w-64 flex-col border-r bg-background shrink-0">
+    <div className="flex h-full w-64 flex-col border-r bg-background shrink-0 print:hidden">
       {/* Logo */}
       <div className="flex h-16 items-center px-6 border-b gap-2">
         <div className="p-1.5 bg-blue-600 rounded-md">
           <Book className="h-5 w-5 text-white" />
         </div>
         <div>
-          <p className="font-bold text-sm leading-tight">Daftar EPS</p>
+          <p className="font-bold text-sm leading-tight text-pink-600">For you khouloud</p>
           <p className="text-xs text-muted-foreground">التربية البدنية</p>
         </div>
       </div>
@@ -60,11 +60,10 @@ export default function Sidebar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
-                  isActive
+                className={`flex items-center gap-3 rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${isActive
                     ? "bg-blue-600 text-white"
                     : "hover:bg-accent hover:text-accent-foreground text-muted-foreground"
-                }`}
+                  }`}
               >
                 <Icon className="h-4 w-4 shrink-0" />
                 {item.label}
